@@ -40,7 +40,6 @@ const displayMealDetails = details => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${details}`
     fetch(url)
     .then(response => response.json())
-    // .then(data => console.log(data))
     .then(data => renderMealInformation(data.meals[0]))
     
 }
